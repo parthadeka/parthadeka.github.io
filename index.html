@@ -14,12 +14,11 @@
 	<body class="is-preload">
 
 		<!-- Header -->
-			
 
 			<head>
 			    <meta charset="UTF-8">
 			    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-			    <title>Landing Page with Sidebar</title>
+			    <title>Landing Page with Sidebar and Social Media Links</title>
 			    <style>
 			        body {
 			            margin: 0;
@@ -104,6 +103,7 @@
 			        section {
 			            padding: 60px 20px;
 			            min-height: 100vh;
+			            flex: 1;
 			        }
 			
 			        section#home {
@@ -115,40 +115,28 @@
 			            font-size: 2.5em;
 			        }
 			
-			        /* Social Media Icons */
-			        .social-media {
-			            display: flex;
-			            justify-content: center;
-			            padding: 20px 0;
+			        /* Footer Styling */
+			        footer {
 			            background-color: #333;
-			            margin-top: auto;
-			        }
-			
-			        .social-media a {
 			            color: white;
-			            text-decoration: none;
+			            padding: 20px;
+			            text-align: center;
+			        }
+			
+			        .social-icons {
+			            margin-top: 10px;
+			        }
+			
+			        .social-icons a {
 			            margin: 0 10px;
+			            color: white;
 			            font-size: 24px;
-			            transition: color 0.3s ease;
+			            text-decoration: none;
 			        }
 			
-			        .social-media a:hover {
-			            color: #f1c40f; /* Change color on hover */
+			        .social-icons a:hover {
+			            color: #aaa;
 			        }
-			
-			        .social-media i {
-			            display: inline-block;
-			            width: 24px;
-			            height: 24px;
-			            background-size: contain;
-			        }
-			
-			        .fa-linkedin { background-image: url('https://cdn-icons-png.flaticon.com/512/145/145807.png'); }
-			        .fa-facebook { background-image: url('https://cdn-icons-png.flaticon.com/512/145/145802.png'); }
-			        .fa-github { background-image: url('https://cdn-icons-png.flaticon.com/512/733/733553.png'); }
-			        .fa-x { background-image: url('https://cdn-icons-png.flaticon.com/512/145/145812.png'); }
-			        .fa-instagram { background-image: url('https://cdn-icons-png.flaticon.com/512/1409/1409946.png'); }
-			
 			    </style>
 			</head>
 			<body>
@@ -196,14 +184,17 @@
 			        <!-- Content for Contact -->
 			    </section>
 			
-			    <!-- Social Media Links -->
-			    <div class="social-media">
-			        <a href="https://www.linkedin.com/in/parthadeka" target="_blank" class="fa fa-linkedin" aria-label="LinkedIn"></a>
-			        <a href="https://www.facebook.com/parthadeka" target="_blank" class="fa fa-facebook" aria-label="Facebook"></a>
-			        <a href="https://github.com/parthadeka" target="_blank" class="fa fa-github" aria-label="GitHub"></a>
-			        <a href="https://twitter.com/parthadeka" target="_blank" class="fa fa-x" aria-label="X"></a>
-			        <a href="https://www.instagram.com/parthadeka" target="_blank" class="fa fa-instagram" aria-label="Instagram"></a>
-			    </div>
+			    <!-- Footer with Social Media Links -->
+			    <footer>
+			        <p>Connect with me on social media!</p>
+			        <div class="social-icons">
+			            <a href="https://www.linkedin.com/in/parthadeka" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			            <a href="https://www.facebook.com/parthadeka" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+			            <a href="https://github.com/parthadeka" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+			            <a href="https://twitter.com/parthadeka" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+			            <a href="https://www.instagram.com/parthadeka" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+			        </div>
+			    </footer>
 			
 			    <script>
 			        function toggleMenu() {
@@ -211,6 +202,8 @@
 			            sidebar.classList.toggle("open");
 			        }
 			    </script>
+			    <!-- Font Awesome for social media icons -->
+			    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 			</body>
 
 		<!-- Main -->
