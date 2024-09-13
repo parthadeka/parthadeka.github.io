@@ -14,42 +14,204 @@
 	<body class="is-preload">
 
 		<!-- Header -->
-			<div id="header">
+			
 
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Partha P Deka</h1>
-							<p>Observational astronomer</p>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-th">About Me</span></a></li>
-								<li><a href="#work" id="work-link"><span class="icon solid fa-user">Work</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
-
-				</div>
-
-				<div class="bottom">
-
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://x.com/Partha__d?t=gRiYJi6JQ2DC8YYSi2QG2w&s=08" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.facebook.com/partha.pratimdeka.94" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://github.com/parthadeka" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="mailto:parthadiucaa@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-
-				</div>
-
-			</div>
+			<head>
+			    <meta charset="UTF-8">
+			    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			    <title>Landing Page with Sidebar</title>
+			    <style>
+			        body {
+			            margin: 0;
+			            font-family: Arial, sans-serif;
+			            display: flex;
+			            flex-direction: column;
+			            min-height: 100vh;
+			        }
+			
+			        /* Navbar Styling */
+			        .navbar {
+			            position: fixed;
+			            top: 0;
+			            width: 100%;
+			            background-color: #333;
+			            padding: 10px 0;
+			            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+			            z-index: 1000;
+			        }
+			
+			        .nav-list {
+			            list-style: none;
+			            display: flex;
+			            justify-content: center;
+			            margin: 0;
+			            padding: 0;
+			        }
+			
+			        .nav-list li {
+			            margin: 0 20px;
+			        }
+			
+			        .nav-list li a {
+			            color: white;
+			            text-decoration: none;
+			            padding: 10px 20px;
+			            display: block;
+			            transition: background-color 0.3s ease;
+			        }
+			
+			        .nav-list li a:hover {
+			            background-color: #575757;
+			            border-radius: 5px;
+			        }
+			
+			        /* Menu Button Styling */
+			        .menu-button {
+			            position: fixed;
+			            top: 20px;
+			            right: 20px;
+			            background-color: #333;
+			            color: white;
+			            padding: 10px 15px;
+			            cursor: pointer;
+			            z-index: 1001;
+			            border-radius: 5px;
+			        }
+			
+			        /* Sidebar Styling */
+			        .sidebar {
+			            position: fixed;
+			            top: 0;
+			            right: -300px; /* Initially hide the sidebar off-screen */
+			            width: 300px;
+			            height: 100%;
+			            background-color: #444;
+			            color: white;
+			            transition: right 0.3s ease;
+			            z-index: 999;
+			        }
+			
+			        /* Sidebar Content Styling */
+			        .sidebar-content {
+			            padding: 20px;
+			        }
+			
+			        /* Sidebar visible */
+			        .sidebar.open {
+			            right: 0; /* Slide the sidebar into view */
+			        }
+			
+			        section {
+			            padding: 60px 20px;
+			            min-height: 100vh;
+			        }
+			
+			        section#home {
+			            padding-top: 100px; /* Add padding to account for the fixed navbar */
+			        }
+			
+			        h1 {
+			            text-align: center;
+			            font-size: 2.5em;
+			        }
+			
+			        /* Social Media Icons */
+			        .social-media {
+			            display: flex;
+			            justify-content: center;
+			            padding: 20px 0;
+			            background-color: #333;
+			            margin-top: auto;
+			        }
+			
+			        .social-media a {
+			            color: white;
+			            text-decoration: none;
+			            margin: 0 10px;
+			            font-size: 24px;
+			            transition: color 0.3s ease;
+			        }
+			
+			        .social-media a:hover {
+			            color: #f1c40f; /* Change color on hover */
+			        }
+			
+			        .social-media i {
+			            display: inline-block;
+			            width: 24px;
+			            height: 24px;
+			            background-size: contain;
+			        }
+			
+			        .fa-linkedin { background-image: url('https://cdn-icons-png.flaticon.com/512/145/145807.png'); }
+			        .fa-facebook { background-image: url('https://cdn-icons-png.flaticon.com/512/145/145802.png'); }
+			        .fa-github { background-image: url('https://cdn-icons-png.flaticon.com/512/733/733553.png'); }
+			        .fa-x { background-image: url('https://cdn-icons-png.flaticon.com/512/145/145812.png'); }
+			        .fa-instagram { background-image: url('https://cdn-icons-png.flaticon.com/512/1409/1409946.png'); }
+			
+			    </style>
+			</head>
+			<body>
+			
+			    <!-- Navigation Menu -->
+			    <nav class="navbar">
+			        <ul class="nav-list">
+			            <li><a href="#home">Home</a></li>
+			            <li><a href="#about">About Me</a></li>
+			            <li><a href="#work">Work</a></li>
+			            <li><a href="#contact">Contact</a></li>
+			        </ul>
+			    </nav>
+			
+			    <!-- Menu Button -->
+			    <div id="menuButton" class="menu-button" onclick="toggleMenu()">
+			        ☰ Menu
+			    </div>
+			
+			    <!-- Sidebar Content -->
+			    <div id="sidebar" class="sidebar">
+			        <div class="sidebar-content">
+			            <p>Your content goes here. This could be a navigation menu, profile info, etc.</p>
+			        </div>
+			    </div>
+			
+			    <!-- Sections -->
+			    <section id="home">
+			        <h1>Welcome to My Home Page</h1>
+			        <!-- Content for Home -->
+			    </section>
+			
+			    <section id="about">
+			        <h1>About Me</h1>
+			        <!-- Content for About Me -->
+			    </section>
+			
+			    <section id="work">
+			        <h1>My Work</h1>
+			        <!-- Content for Work -->
+			    </section>
+			
+			    <section id="contact">
+			        <h1>Contact Me</h1>
+			        <!-- Content for Contact -->
+			    </section>
+			
+			    <!-- Social Media Links -->
+			    <div class="social-media">
+			        <a href="https://www.linkedin.com/in/parthadeka" target="_blank" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+			        <a href="https://www.facebook.com/parthadeka" target="_blank" class="fa fa-facebook" aria-label="Facebook"></a>
+			        <a href="https://github.com/parthadeka" target="_blank" class="fa fa-github" aria-label="GitHub"></a>
+			        <a href="https://twitter.com/parthadeka" target="_blank" class="fa fa-x" aria-label="X"></a>
+			        <a href="https://www.instagram.com/parthadeka" target="_blank" class="fa fa-instagram" aria-label="Instagram"></a>
+			    </div>
+			
+			    <script>
+			        function toggleMenu() {
+			            var sidebar = document.getElementById("sidebar");
+			            sidebar.classList.toggle("open");
+			        }
+			    </script>
+			</body>
 
 		<!-- Main -->
 			<div id="main">
