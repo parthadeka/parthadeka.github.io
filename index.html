@@ -21,122 +21,124 @@
 			    <title>Landing Page with Sidebar and Social Media Links</title>
 			    <style>
 			        body {
-			            margin: 0;
-			            font-family: Arial, sans-serif;
-			            display: flex;
-			            flex-direction: column;
-			            min-height: 100vh;
-			        }
-			
-			        /* Navbar Styling */
-			        .navbar {
-			            position: fixed;
-			            top: 0;
-			            width: 100%;
-			            background-color: #333;
-			            padding: 10px 0;
-			            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-			            z-index: 1000;
-			        }
-			
-			        .nav-list {
-			            list-style: none;
-			            display: flex;
-			            justify-content: center;
-			            margin: 0;
-			            padding: 0;
-			        }
-			
-			        .nav-list li {
-			            margin: 0 20px;
-			        }
-			
-			        .nav-list li a {
-			            color: white;
-			            text-decoration: none;
-			            padding: 10px 20px;
-			            display: block;
-			            transition: background-color 0.3s ease;
-			        }
-			
-			        .nav-list li a:hover {
-			            background-color: #575757;
-			            border-radius: 5px;
-			        }
-			
-			        /* Menu Button Styling */
-			        .menu-button {
-			            position: fixed;
-			            top: 20px;
-			            right: 20px;
-			            background-color: #333;
-			            color: white;
-			            padding: 10px 15px;
-			            cursor: pointer;
-			            z-index: 1001;
-			            border-radius: 5px;
-			        }
-			
-			        /* Sidebar Styling */
-			        .sidebar {
-			            position: fixed;
-			            top: 0;
-			            right: -300px; /* Initially hide the sidebar off-screen */
-			            width: 300px;
-			            height: 100%;
-			            background-color: #444;
-			            color: white;
-			            transition: right 0.3s ease;
-			            z-index: 999;
-			        }
-			
-			        /* Sidebar Content Styling */
-			        .sidebar-content {
-			            padding: 20px;
-			        }
-			
-			        /* Sidebar visible */
-			        .sidebar.open {
-			            right: 0; /* Slide the sidebar into view */
-			        }
-			
-			        section {
-			            padding: 60px 20px;
-			            min-height: 100vh;
-			            flex: 1;
-			        }
-			
-			        section#home {
-			            padding-top: 50px; /* Add padding to account for the fixed navbar */
-			        }
-			
-			        h1 {
-			            text-align: center;
-			            font-size: 2.5em;
-			        }
-			
-			        /* Footer Styling */
-			        footer {
-			            background-color: #333;
-			            color: white;
-			            padding: 20px;
-			            text-align: center;
-			        }
-			
-			        .social-icons {
-			            margin-top: 10px;
-			        }
-			
-			        .social-icons a {
-			            margin: 0 10px;
-			            color: white;
-			            font-size: 24px;
-			            text-decoration: none;
-			        }
-			
-			        .social-icons a:hover {
-			            color: #aaa;
-			        }
+				    margin: 0;
+				    font-family: Arial, sans-serif;
+				    display: flex;
+				    flex-direction: column;
+				    min-height: 100vh;
+				}
+				
+				/* Navbar Styling */
+				.navbar {
+				    position: fixed;
+				    top: 0;
+				    width: 100%;
+				    background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background */
+				    padding: 10px 0;
+				    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+				    z-index: 1000;
+				}
+				
+				/* Navbar Links */
+				.nav-list {
+				    list-style: none;
+				    display: flex;
+				    justify-content: center;
+				    margin: 0;
+				    padding: 0;
+				}
+				
+				.nav-list li {
+				    margin: 0 20px;
+				}
+				
+				.nav-list li a {
+				    color: white;
+				    text-decoration: none;
+				    padding: 10px 20px;
+				    display: block;
+				    transition: background-color 0.3s ease;
+				}
+				
+				.nav-list li a:hover {
+				    background-color: rgba(87, 87, 87, 0.7); /* Semi-transparent hover effect */
+				    border-radius: 5px;
+				}
+				
+				/* Menu Button Styling */
+				.menu-button {
+				    position: fixed;
+				    top: 20px;
+				    right: 20px;
+				    background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background */
+				    color: white;
+				    padding: 10px 15px;
+				    cursor: pointer;
+				    z-index: 1001;
+				    border-radius: 5px;
+				    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border for better visibility */
+				}
+				
+				/* Sidebar Styling */
+				.sidebar {
+				    position: fixed;
+				    top: 0;
+				    right: -300px; /* Initially hide the sidebar off-screen */
+				    width: 300px;
+				    height: 100%;
+				    background-color: #444;
+				    color: white;
+				    transition: right 0.3s ease;
+				    z-index: 999;
+				}
+				
+				/* Sidebar Content Styling */
+				.sidebar-content {
+				    padding: 20px;
+				}
+				
+				/* Sidebar visible */
+				.sidebar.open {
+				    right: 0; /* Slide the sidebar into view */
+				}
+				
+				section {
+				    padding: 60px 20px;
+				    min-height: 100vh;
+				    flex: 1;
+				}
+				
+				section#home {
+				    padding-top: 100px; /* Add padding to account for the fixed navbar */
+				}
+				
+				h1 {
+				    text-align: center;
+				    font-size: 2.5em;
+				}
+				
+				/* Footer Styling */
+				footer {
+				    background-color: #333;
+				    color: white;
+				    padding: 20px;
+				    text-align: center;
+				}
+				
+				.social-icons {
+				    margin-top: 10px;
+				}
+				
+				.social-icons a {
+				    margin: 0 10px;
+				    color: white;
+				    font-size: 24px;
+				    text-decoration: none;
+				}
+				
+				.social-icons a:hover {
+				    color: #aaa;
+				}
 			    </style>
 			</head>
 			<body>
