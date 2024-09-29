@@ -115,6 +115,7 @@
 			        }
 			
 			        /* Home Section with Background Image */
+					<!--
 			        section#home {
 			            background-image: url('images/2015_meerkat_05-1030x685.jpg'); /* Background image URL */
 			            background-size: cover;
@@ -133,7 +134,35 @@
 			            margin: 0;
 					color: cyan;
 			        }
-			
+					-->
+
+					
+					/* Use flexbox to layout the page */
+					#page {
+					    display: flex;
+					    flex-direction: column;
+					    justify-content: space-between; /* Distributes the top and bottom text */
+					    height: 100vh; /* Full viewport height */
+					}
+					
+					/* Style the top text */
+					.top-text h1 {
+					    margin: 0;
+					    text-align: center;
+					    padding: 20px;
+					    background-color: transparent; /* Optional background color */
+					    color: #333; /* Text color */
+					}
+					
+					/* Style the bottom text */
+					.bottom-text h1 {
+					    margin: 0;
+					    text-align: center;
+					    padding: 20px;
+					    background-color: transparent; /* Optional background color */
+					    color: #333; /* Text color */
+					}
+										
 			        /* Footer Styling */
 			        footer {
 			            background-color: #333;
@@ -183,6 +212,17 @@
 			    </div>
 			
 			    <!-- Sections -->
+				<section id="home">
+				    <div class="top-text">
+				        <h1>Text at the Top of the Page</h1>
+				    </div>
+				    
+				    <div class="bottom-text">
+				        <h1>Text at the Bottom of the Page</h1>
+				    </div>
+				</section>
+
+				<!--
 			    <section id="home">
 				    <div class="container" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
 					<header>
@@ -191,7 +231,7 @@
 					</header>
 			        	<!-- Content for Home -->
 			    </section>
-
+				-->
 			
 			    <section id="about">
 			        <h1>About Me</h1>
