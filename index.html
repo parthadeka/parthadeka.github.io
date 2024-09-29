@@ -30,42 +30,42 @@
 			            min-height: 100vh;
 			        }
 			
-			        /* Navbar Styling */
-			        .navbar {
-			            position: fixed;
-			            top: 0;
-			            width: 100%;
-			            background-color: transparent; /* Fully transparent background */
-			            padding: 10px 0;
-			            /*box-shadow: 0 0px 0px rgba(0, 0, 0, 0);*/ /* Optional shadow for visibility */
-			            z-index: 1000;
-			            backdrop-filter: blur(10px); /* Optional: adds a blur effect to the content behind the navbar */
-			        }
-			
-			        .nav-list {
-			            list-style: none;
-			            display: flex;
-			            justify-content: center;
-			            margin: 0;
-			            padding: 0;
-			        }
-			
-			        .nav-list li {
-			            margin: 0 20px;
-			        }
-			
-			        .nav-list li a {
-			            color: white;
-			            text-decoration: none;
-			            padding: 10px 20px;
-			            display: block;
-			            transition: background-color 0.3s ease;
-			        }
-			
-			        .nav-list li a:hover {
-			            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent hover effect */
-			            border-radius: 5px;
-			        }
+			        /* Styling the navigation bar */
+				.transparent-navbar {
+				    background-color: transparent; /* Makes the navbar background fully transparent */
+				    border: none; /* Removes any default borders */
+				    box-shadow: none; /* Removes any box shadow */
+				    position: fixed; /* Keeps the navbar fixed on top while scrolling */
+				    width: 100%; /* Ensures it spans the full width */
+				    z-index: 100; /* Keeps the navbar above other elements */
+				    padding: 10px 0; /* Adjust padding as per your design */
+				}
+				
+				/* Styling the navigation links */
+				.transparent-navbar ul {
+				    list-style: none; /* Removes bullet points */
+				    display: flex; /* Aligns items horizontally */
+				    justify-content: center; /* Centers the nav items */
+				    margin: 0;
+				    padding: 0;
+				}
+				
+				.transparent-navbar li {
+				    margin: 0 15px; /* Adjust space between menu items */
+				}
+				
+				.transparent-navbar a {
+				    text-decoration: none; /* Removes underline from links */
+				    color: white; /* Sets the text color */
+				    font-size: 18px; /* Adjust font size */
+				    padding: 5px 10px; /* Adds padding around the link */
+				    transition: color 0.3s ease; /* Smooth transition for hover effects */
+				}
+				
+				.transparent-navbar a:hover {
+				    color: #f0a500; /* Changes text color on hover */
+				}
+
 			
 			        /* Menu Button Styling */
 			        .menu-button {
