@@ -1,423 +1,282 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>ParthaDekaGitHub</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partha Pratim Deka | Radio Astronomer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1A365D; /* Deep Navy Blue */
+            --secondary-color: #4A5568; /* Slate Gray */
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+        }
 
-		<!-- Header -->
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
 
-			<!DOCTYPE html>
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
 
-			<head>
-			    <meta charset="UTF-8">
-			    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-			    <title>Landing Page with Transparent Navbar and Background Image</title>
-			    <style>
-				<!--
-			        body {
-			            margin: 0;
-			            font-family: Arial, sans-serif;
-			            display: flex;
-			            flex-direction: column;
-			            min-height: 100vh;
-			        }
-				-->
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-				html, body {
-				    height: 100%;
-				    margin: 0;
-				    padding: 0;
-				}
-			
-			        /* Styling the navigation bar */
-			        .navbar {
-			            position: fixed;
-				    border: none; /* Removes any default borders */
-			            top: 0;
-			            width: 100%;
-			            background-color: black; /* Fully transparent background */
-			            padding: 10px 0;
-			            box-shadow: none; /* Optional shadow for visibility */
-			            z-index: 1000;
-			            backdrop-filter: blur(10px); /* Optional: adds a blur effect to the content behind the navbar */
-			        }
-			
-			        .nav-list {
-			            list-style: none;
-			            display: flex;
-			            justify-content: center;
-			            margin: 0;
-			            padding: 0;
-			        }
-			
-			        .nav-list li {
-			            margin: 0 20px;
-			        }
-			
-			        .nav-list li a {
-			            color: white;
-			            text-decoration: none;
-			            padding: 10px 20px;
-			            display: block;
-			            transition: background-color 0.3s ease;
-			        }
-			
-			        .nav-list li a:hover {
-					/*color: #f0a500;*/ /* Changes text color on hover */
-			            	/*background-color: rgba(255, 255, 255, 0.2);*/ /* Semi-transparent hover effect */
-			            	/*border-radius: 0px;*/
-					color: #f0a500; /* Changes text color on hover */
-			        }
+        nav a:hover {
+            color: #a0aec0;
+        }
 
-			
-			        /* Menu Button Styling */
-			        .menu-button {
-			            position: fixed;
-			            top: 20px;
-			            right: 20px;
-			            background-color: transparent; /* Fully transparent background */
-			            color: white;
-			            padding: 10px 15px;
-			            cursor: pointer;
-			            z-index: 1001;
-			            border: 0px solid rgba(255, 255, 255, 0.3); /* Optional border for better visibility */
-			            border-radius: 5px;
-			        }
-			
-			        /* Sidebar Styling */
-			        .sidebar {
-			            position: fixed;
-			            top: 0;
-			            right: -300px; /* Initially hide the sidebar off-screen */
-			            width: 300px;
-			            height: 100%;
-			            background-color: #444;
-			            color: white;
-			            transition: right 0.3s ease;
-			            z-index: 999;
-			        }
-			
-			        .sidebar-content {
-			            padding: 20px;
-			        }
-			
-			        .sidebar.open {
-			            right: 0; /* Slide the sidebar into view */
-			        }
-			
-			        /* Home Section with Background Image */
-					<!--
-			        section#home {
-			            background-image: url('images/2015_meerkat_05-1030x685.jpg'); /* Background image URL */
-			            background-size: cover;
-			            background-position: center;
-			            padding: 60px 20px;
-			            min-height: 100vh;
-					left: 50%; /* Centers it horizontally */
-    					transform: translateX(-50%); /* Centers the text exactly */
-			            color: yellow;
-			            text-align: center;
-			            position: relative; /* Position relative for stacking context */
-			        }
-			
-			        h1 {
-			            font-size: 2.5em;
-			            margin: 0;
-					color: cyan;
-			        }
-					-->
+        /* Container for content */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 20px;
+        }
 
-					
-				/* Use flexbox to layout the page */
-				section#home {
-				    display: flex;
-				    flex-direction: column;
-				    justify-content: space-between; /* Distributes the top and bottom text */
-				    height: 100vh; /* Full viewport height */
-				}
-				
-				/* Style the top text */
-				.top-text h1 {
-				    margin-top: 40px;
-				    text-align: center;
-				    padding: 20px;
-				    background-color: transparent; /* Optional background color */
-				    color: yellow; /* Text color */
-				}
-				
-				/* Style the bottom text */
-				.bottom-text h1 {
-				    margin: 0;
-				    text-align: center;
-				    padding: 20px;
-				    background-color: transparent; /* Optional background color */
-				    color: white; /* Text color */
-				}
-										
-			        /* Footer Styling */
-			        footer {
-			            background-color: #333;
-			            color: white;
-			            padding: 20px;
-			            text-align: center;
-			        }
-			
-			        .social-icons {
-			            margin-top: 10px;
-			        }
-			
-			        .social-icons a {
-			            margin: 0 10px;
-			            color: white;
-			            font-size: 24px;
-			            text-decoration: none;
-			        }
-			
-			        .social-icons a:hover {
-			            color: #aaa;
-			        }
-			    </style>
-			</head>
-			<body>
-			
-			    <!-- Navigation Menu -->
-			    <nav class="navbar">
-			        <ul class="nav-list">
-			            <li><a href="#home">Home</a></li>
-			            <li><a href="#about">About Me</a></li>
-			            <li><a href="#work">My Work</a></li>
-			            <li><a href="#contact">Contact</a></li>
-			        </ul>
-			    </nav>
-			
-			    <!-- Menu Button -->
-			    <div id="menuButton" class="menu-button" onclick="toggleMenu()">
-			        ☰ Menu
-			    </div>
-			
-			    <!-- Sidebar Content -->
-			    <div id="sidebar" class="sidebar">
-			        <div class="sidebar-content">
-			            <p>Your content goes here. This could be a navigation menu, profile info, etc.</p>
-			        </div>
-			    </div>
-			
-			    <!-- Sections -->
-				<section id="home">
-				    <div class="top-text">
-				        <h1>Hi..! So good to see you here!</h1>
-				    </div>
-				    
-				    <div class="bottom-text">
-				        <h1>I'm <strong>Partha</strong>, an observational astronomer</h1>
-				    </div>
-				</section>
+        /* Sections */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #ddd;
+        }
 
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+        }
 
-				<!-- About Me -->
-				<section id="about" class="three">
-					<div class="container">
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 5rem 0;
+            background-color: white;
+        }
 
-						<header>
-							<h2>About Me</h2>
-						</header>
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            margin-bottom: 20px;
+        }
 
-						<a href="#" class="image featured"><img src="images/PXL_20230916_082736478.jpg" alt="" /></a>
+        .hero h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
-						<p>I'm currently a PhD student at the Inter-University Centre for Astronomy and Astrophysics, Pune. I work on investigating the amount, distribution and kinematics of cold atomic gas in radio-loud AGNs to understand the overall process of galaxy evolution. Besides the part of Physics that I can understand, I enjoy coding and playing badminton.</p>
+        .hero h3 {
+            color: var(--secondary-color);
+            margin-top: 5px;
+            font-weight: 300;
+        }
 
-					</div>
-				</section>
-			
-			    <section id="work">
-			        <h1>My Work</h1>
-			        <!-- Content for Work -->
-			    </section>
-			
-			    <section id="contact">
-			        <h1>Contact Me</h1>
-			        <!-- Content for Contact -->
-			    </section>
-			
-			    <!-- Footer with Social Media Links -->
-			    <footer>
-			        <p>Connect with me on social media!</p>
-			        <div class="social-icons">
-			            <a href="https://www.linkedin.com/in/parthadeka" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-			            <a href="https://www.facebook.com/parthadeka" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-			            <a href="https://github.com/parthadeka" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-			            <a href="https://twitter.com/parthadeka" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
-			            <a href="https://www.instagram.com/parthadeka" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-			        </div>
-			    </footer>
-			
-			    <script>
-			        function toggleMenu() {
-			            var sidebar = document.getElementById("sidebar");
-			            sidebar.classList.toggle("open");
-			        }
-			    </script>
-			    <!-- Font Awesome for social media icons -->
-			    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-			</body>
-			
-		
-		<!-- Main -->
-			<div id="main">
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover" style="background-image: url('images/2015_meerkat_05-1030x685.jpg'); background-size: cover; background-position: center; height: 100vh;">
-    						<div class="container" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
-        					<header>
-           						<h2 class="alt">Hi..! So good to see you here!</h2>
-            						<p>I'm <strong>Partha</strong>, an observational astronomer<br /></p>
-        					</header>
-        					<footer>
-            						<a href="https://github.com/parthadeka" class="button scrolly">GitHub Page</a>
-        					</footer>
-    						</div>
-					</section>
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
 
+        /* Lists */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
 
-							<header>
-								<h2>Portfolio</h2>
-							</header>
+        ul li::before {
+            content: '\f105'; /* FontAwesome Angle Right */
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
 
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
+        ul ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        
+        ul ul li::before {
+            color: var(--secondary-color);
+        }
 
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
+        /* Banner Images */
+        .banner-img-container {
+            margin: 40px 0 20px 0;
+            text-align: center;
+        }
 
-						</div>
-					</section>
+        .banner-img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
 
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
+        .img-credit {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
 
-							<header>
-								<h2>About Me</h2>
-							</header>
+        /* Highlight Box */
+        .highlight-box {
+            background-color: #e2e8f0;
+            padding: 15px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
 
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
 
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications & Talks</a>
+        <a href="#hobbies">Hobbies</a>
+    </nav>
 
-						</div>
-					</section>
+    <section class="hero" id="about">
+        <div class="container">
+            <img src="profile.jpg" alt="Partha Pratim Deka" class="profile-img">
+            
+            <h1>Partha Pratim Deka</h1>
+            <h3>Joint Postdoctoral Researcher • UCT & SARAO <br> Astronomer on Duty</h3>
+            
+            <p style="max-width: 600px; margin: 20px auto; font-size: 1.1rem;">
+                I am a radio astronomer specializing in data-intensive astronomy and the multi-wavelength characterization of radio sources. I recently completed my Ph.D. at IUCAA, Pune, where I studied cold atomic gas associated with radio-loud AGNs using the MeerKAT Absorption Line Survey (MALS).
+            </p>
 
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
+            <div class="social-links">
+                <a href="mailto:parthadiucaa@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/" title="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://orcid.org/" title="ORCID" target="_blank"><i class="fab fa-orcid"></i></a>
+                <a href="https://www.researchgate.net/" title="ResearchGate" target="_blank"><i class="fab fa-researchgate"></i></a>
+            </div>
+        </div>
+    </section>
 
-							<header>
-								<h2>Contact</h2>
-							</header>
+    <section id="research">
+        <div class="container">
+            <h2>Research Interests</h2>
+            <ul>
+                <li><strong>Data intensive astronomy</strong>
+                    <ul>
+                        <li>Radio survey planning, catalog generation and characterization</li>
+                        <li>Multi-wavelength characterization of radio sources</li>
+                        <li>Applications of machine learning in astronomy</li>
+                    </ul>
+                </li>
+                <li><strong>Galaxy evolution</strong>
+                    <ul>
+                        <li>Kinematics and distribution of cold gas in galaxies and its redshift evolution</li>
+                        <li>Active Galactic Nuclei (AGN) feeding and feedback</li>
+                        <li>High redshift radio galaxies</li>
+                    </ul>
+                </li>
+            </ul>
 
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+            <div class="banner-img-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/MeerKAT_radio_image_of_the_Galactic_Centre.jpg/1024px-MeerKAT_radio_image_of_the_Galactic_Centre.jpg" alt="MeerKAT Radio Image of the Galactic Centre" class="banner-img">
+                <div class="img-credit">Image Credit: SARAO (South African Radio Astronomy Observatory)</div>
+            </div>
+        </div>
+    </section>
 
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
+    <section id="publications">
+        <div class="container">
+            <h2>Recent Highlights</h2>
+            
+            <div class="highlight-box">
+                <strong><i class="fas fa-chalkboard-teacher"></i> Mentorship (2024 - Present):</strong> Co-supervising a Master's student at UCT on the detection and characterization of radio sources from MeerLIRGS and finding anomalous sources using Machine Learning.
+            </div>
 
-						</div>
-					</section>
+            <h3>Selected Talks & Colloquia</h3>
+            <ul>
+                <li><strong>October 2025:</strong> <em>Toward an Unbiased View of Cold Gas in Radio-Loud AGNs</em>, Colloquium at the South African Astronomical Observatory (SAAO), Cape Town.</li>
+                <li><strong>[Month] 2025:</strong> <em>An unbiased view of cold-atomic gas associated with radio-loud AGNs</em>, Poster at the SKAO Conference, Germany.</li>
+                <li><strong>December 2024:</strong> Contributed talk at the 'Baryons Beyond Galactic Boundaries' conference, IUCAA, Pune.</li>
+            </ul>
 
-			</div>
+            <p style="margin-top: 30px;">
+                <a href="https://scholar.google.com/" target="_blank" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">
+                    <i class="fas fa-external-link-alt"></i> View my full publication list on Google Scholar / NASA ADS
+                </a>
+            </p>
 
-		<!-- Footer -->
-			<div id="footer">
+            <div class="banner-img-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/NGC_3324_James_Webb_Space_Telescope.jpg/1024px-NGC_3324_James_Webb_Space_Telescope.jpg" alt="JWST Carina Nebula" class="banner-img">
+                <div class="img-credit">Image Credit: NASA, ESA, CSA, and STScI</div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+    <section id="hobbies">
+        <div class="container">
+            <h2>Outside the Observatory</h2>
+            <p>When I'm not looking at radio data or acting as Astronomer on Duty, you can find me...</p>
+            
+            <ul>
+                <li><strong>Hiking/Outdoors:</strong> [Write a bit about enjoying the trails around Cape Town, Table Mountain, etc.]</li>
+                <li><strong>Photography:</strong> [Add a sentence about astrophotography or regular photography if applicable.]</li>
+                <li><strong>Music/Reading:</strong> [Add your favorite genres or authors here.]</li>
+            </ul>
+        </div>
+    </section>
 
-			</div>
+    <footer>
+        <p>&copy; 2026 Partha Pratim Deka. All rights reserved.</p>
+        <p>Cape Town, South Africa</p>
+    </footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
