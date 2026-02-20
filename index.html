@@ -33,6 +33,7 @@
             top: 0;
             z-index: 1000;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         nav a {
@@ -60,19 +61,38 @@
             border-bottom: 1px solid #ddd;
         }
 
+        .section-header-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
         h2 {
             color: var(--primary-color);
             border-bottom: 2px solid var(--primary-color);
             display: inline-block;
             padding-bottom: 5px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
 
-        /* Hero Section */
+        /* Cartoon Icons for Sections */
+        .section-cartoon {
+            display: block;
+            margin: 0 auto 15px auto;
+            width: 80px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        /* Hero Section with Background Image */
         .hero {
             text-align: center;
-            padding: 5rem 0;
-            background-color: white;
+            padding: 6rem 0;
+            /* The linear-gradient creates a dark overlay so text stays readable! */
+            /* It looks for 'hero-bg.jpg' inside your 'images' folder */
+            background-image: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('images/2015_meerkat_05-1030x685.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Creates a nice subtle parallax effect */
+            color: white;
         }
 
         .profile-img {
@@ -80,31 +100,38 @@
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--primary-color);
+            border: 4px solid white; /* Changed to white to pop against dark bg */
             margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
         .hero h1 {
-            color: var(--primary-color);
+            color: white;
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
         }
 
         .hero h3 {
-            color: var(--secondary-color);
+            color: #e2e8f0;
             margin-top: 5px;
             font-weight: 300;
         }
 
+        .hero p {
+            color: #f8f9fa;
+        }
+
         .social-links a {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin: 0 10px;
+            color: white;
+            font-size: 1.8rem;
+            margin: 0 12px;
             transition: 0.3s;
         }
 
         .social-links a:hover {
-            color: var(--secondary-color);
+            color: #a0aec0;
+            transform: translateY(-3px);
+            display: inline-block;
         }
 
         /* Lists */
@@ -187,12 +214,12 @@
 
     <section class="hero" id="about">
         <div class="container">
-            <img src="profile.jpg" alt="Partha Pratim Deka" class="profile-img">
+            <img src="images/profile.jpg" alt="Partha Pratim Deka" class="profile-img">
             
             <h1>Partha Pratim Deka</h1>
             <h3>Joint Postdoctoral Researcher • UCT & SARAO <br> Astronomer on Duty</h3>
             
-            <p style="max-width: 600px; margin: 20px auto; font-size: 1.1rem;">
+            <p style="max-width: 650px; margin: 20px auto; font-size: 1.15rem;">
                 I am a radio astronomer specializing in data-intensive astronomy and the multi-wavelength characterization of radio sources. I recently completed my Ph.D. at IUCAA, Pune, where I studied cold atomic gas associated with radio-loud AGNs using the MeerKAT Absorption Line Survey (MALS).
             </p>
 
@@ -207,7 +234,11 @@
 
     <section id="research">
         <div class="container">
-            <h2>Research Interests</h2>
+            <div class="section-header-container">
+                <img src="images/research-cartoon.png" alt="Research Cartoon" class="section-cartoon">
+                <h2>Research Interests</h2>
+            </div>
+            
             <ul>
                 <li><strong>Data intensive astronomy</strong>
                     <ul>
@@ -234,7 +265,10 @@
 
     <section id="publications">
         <div class="container">
-            <h2>Recent Highlights</h2>
+            <div class="section-header-container">
+                <img src="images/publications-cartoon.png" alt="Publications Cartoon" class="section-cartoon">
+                <h2>Recent Highlights</h2>
+            </div>
             
             <div class="highlight-box">
                 <strong><i class="fas fa-chalkboard-teacher"></i> Mentorship (2024 - Present):</strong> Co-supervising a Master's student at UCT on the detection and characterization of radio sources from MeerLIRGS and finding anomalous sources using Machine Learning.
@@ -262,13 +296,17 @@
 
     <section id="hobbies">
         <div class="container">
-            <h2>Outside the Observatory</h2>
+            <div class="section-header-container">
+                <img src="images/hobbies-cartoon.png" alt="Hobbies Cartoon" class="section-cartoon">
+                <h2>Outside the Observatory</h2>
+            </div>
+
             <p>When I'm not looking at radio data or acting as Astronomer on Duty, you can find me...</p>
             
             <ul>
-                <li><strong>Hiking/Outdoors:</strong> [Write a bit about enjoying the trails around Cape Town, Table Mountain, etc.]</li>
-                <li><strong>Photography:</strong> [Add a sentence about astrophotography or regular photography if applicable.]</li>
-                <li><strong>Music/Reading:</strong> [Add your favorite genres or authors here.]</li>
+                <li><strong>Hiking/Outdoors:</strong> Enjoying the trails around Cape Town and Table Mountain.</li>
+                <li><strong>Photography:</strong> Capturing moments through my camera lens.</li>
+                <li><strong>Music/Reading:</strong> Relaxing with a good book or playlist.</li>
             </ul>
         </div>
     </section>
