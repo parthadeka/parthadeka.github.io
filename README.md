@@ -1,1 +1,0 @@
-# parthadeka.github.io
